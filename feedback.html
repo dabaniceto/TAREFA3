@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><img src="icone.png" class="icone" alt="home"></a></li>
+            <li><a href="bio.html">Biografia</a></li>
+            <li><a href="projects.html">Projetos</a></li>
+            <li><a href="skills.html">Habilidades</a></li>
+            <li><a href="contact.html">Contato</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <head> ME ENVIE UMA MENSAGEM</head>
+    <h1>Preencha o Formulário</h1>
+    <form class="meuformulario">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu Nome">
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="seu.email@provedor.com">
+        
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+
+        <button type="submit" onclick="enviarMensagem()">Enviar</button>
+        </form>
+        <script>
+            function enviarMensagem(){
+                alert('Mensagem foi enviada com sucesso')
+            }
+        </script>
+
+</body>
+</html>

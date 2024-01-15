@@ -10,8 +10,8 @@ nav {
     background-color: #333;
     color: white;
     padding: 20px;
-    margin-top: -10px;
-    margin-left: -10px;
+    margin: 0 auto; 
+    text-align: center;
     
 }
 
@@ -23,9 +23,15 @@ nav ul {
 
 nav li {
     display: inline;
-    margin-right: 20px;
-    
+    margin-right: 0px;
 }
+a {
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
 
 header {
     background-color:black;
@@ -46,7 +52,7 @@ a:hover {
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -54,16 +60,71 @@ h2 {
 
 }
 
-<style>
-#gallery {
-margin: 40px auto;
-text-align: center;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fil, minmax (250px, 1fr));
+    gap: 16px;
+    padding: 16px;
 }
-#gallery img {
-width: 200px;
-height: 270px;
-border-radius: 10px;
-margin: 10px;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+.image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}   
+
+.image:hover {
+    transform: scale(1.05);
+
 }
-</style>
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+.icone{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meuformulario {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f2f2f2;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
